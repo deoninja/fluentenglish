@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluent English - Master English with Expert Tutors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary: #4361ee;
+            --secondary: #f72585;
+            --accent: #4cc9f0;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1f2937;
+            --bg-secondary: #111827;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --border-color: #374151;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
+        .feature-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 6px var(--shadow);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px var(--shadow);
+        }
+
+        .feature-icon {
+            transition: all 0.3s ease;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .testimonial-card {
+            transition: all 0.4s ease;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px var(--shadow);
+        }
+
+        .tutor-card {
+            transition: all 0.4s ease;
+            overflow: hidden;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .tutor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px var(--shadow);
+        }
+
+        .tutor-card img {
+            transition: all 0.5s ease;
+        }
+
+        .tutor-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .course-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px var(--shadow);
+        }
+
+        .popular-course {
+            position: relative;
+            border: 2px solid var(--primary);
+        }
+
+        .popular-course::before {
+            content: "Most Popular";
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 30px;
+            font-size: 12px;
+            font-weight: bold;
+            transform: rotate(45deg);
+            z-index: 10;
+        }
+
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .wave {
+            animation: wave 8s linear infinite;
+        }
+
+        @keyframes wave {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .text-gradient {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--text-primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.6);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.6);
+            background: var(--light);
+        }
+
+        .stats-item {
+            transition: all 0.3s ease;
+        }
+
+        .stats-item:hover {
+            transform: scale(1.05);
+        }
+
+        .faq-item {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-toggle.active i {
+            transform: rotate(180deg);
+        }
+
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .shape-blob {
+            background: var(--primary);
+            height: 300px;
+            width: 300px;
+            border-radius: 30% 50% 20% 40%;
+            opacity: 0.2;
+            position: absolute;
+            filter: blur(40px);
+            animation: transform 20s ease-in-out infinite both alternate;
+        }
+
+        @keyframes transform {
+
+            0%,
+            100% {
+                border-radius: 30% 50% 20% 40%;
+                transform: translate(0, 0);
+            }
+
+            25% {
+                border-radius: 50% 30% 40% 20%;
+                transform: translate(50px, 50px);
+            }
+
+            50% {
+                border-radius: 40% 20% 30% 50%;
+                transform: translate(0, 100px);
+            }
+
+            75% {
+                border-radius: 20% 40% 50% 30%;
+                transform: translate(-50px, 50px);
+            }
+        }
+
+        .shape-blob.two {
+            height: 400px;
+            width: 400px;
+            left: 60%;
+            top: 40%;
+            animation: transform 25s ease-in-out infinite both alternate;
+        }
+
+        .shape-blob.three {
+            height: 350px;
+            width: 350px;
+            left: 30%;
+            top: 70%;
+            animation: transform 30s ease-in-out infinite both alternate;
+        }
+
+        .glow {
+            box-shadow: 0 0 20px rgba(67, 97, 238, 0.5);
+        }
+
+        .glow:hover {
+            box-shadow: 0 0 40px rgba(67, 97, 238, 0.8);
+        }
+
+        .typing-demo {
+            width: 22ch;
+            animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Global text color fixes for dark mode */
+        .text-gray-600,
+        .text-gray-700,
+        .text-gray-800 {
+            color: var(--text-secondary) !important;
+        }
+
+        .text-gray-400 {
+            color: var(--text-secondary) !important;
+            opacity: 0.8;
+        }
+
+        /* Form elements dark mode support */
+        input,
+        textarea,
+        select {
+            background-color: var(--bg-primary) !important;
+            color: var(--text-primary) !important;
+            border-color: var(--border-color) !important;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: var(--text-secondary) !important;
+            opacity: 0.7;
+        }
+
+        /* FAQ and other content sections */
+        .faq-item {
+            background-color: var(--bg-primary) !important;
+            border: 1px solid var(--border-color) !important;
+        }
+
+        /* Footer and other sections */
+        footer {
+            background-color: var(--bg-secondary) !important;
+        }
+
+        /* Theme toggle button styling */
+        #theme-toggle:hover {
+            background-color: var(--bg-secondary) !important;
+        }
+
+        /* Mobile theme toggle styling */
+        #mobile-theme-toggle:hover {
+            background-color: var(--bg-secondary) !important;
+        }
+
+        /* Additional comprehensive dark mode fixes */
+        .tutor-card,
+        .testimonial-card {
+            background-color: var(--bg-primary) !important;
+            border: 1px solid var(--border-color) !important;
+        }
+
+        .faq-item {
+            background-color: var(--bg-secondary) !important;
+        }
+
+        .faq-toggle h3 {
+            color: var(--text-primary) !important;
+        }
+
+        /* Contact form styling */
+        .contact-form-container {
+            background-color: var(--bg-primary) !important;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: var(--bg-secondary) !important;
+            color: var(--text-primary) !important;
+        }
+
+        /* Badge and tag styling */
+        .bg-blue-100 {
+            background-color: var(--primary) !important;
+            color: white !important;
+            opacity: 0.8;
+        }
+
+        /* Hero section cards */
+        .hero-card {
+            background-color: var(--bg-primary) !important;
+            color: var(--text-primary) !important;
+        }
+
+        /* Theme toggle button hover states */
+        #theme-toggle:hover,
+        #mobile-theme-toggle:hover {
+            background-color: var(--bg-secondary) !important;
+        }
+
+        /* Additional text visibility fixes */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--text-primary) !important;
+        }
+
+        p,
+        span,
+        div {
+            color: var(--text-primary);
+        }
+
+        /* Ensure all sections have proper backgrounds */
+        section {
+            background-color: var(--bg-primary);
+        }
+
+        /* Override any remaining hardcoded colors */
+        .text-white {
+            color: white !important;
+        }
+
+        /* Ensure proper contrast for all interactive elements */
+        button,
+        a {
+            transition: all 0.3s ease;
+        }
+
+        /* Make sure all cards and containers are properly themed */
+        .container,
+        .max-w-3xl,
+        .max-w-4xl {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 transition-all duration-300 shadow-md"
+        style="background-color: var(--bg-primary); box-shadow: 0 4px 6px var(--shadow);">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-blue-600 mr-2">
+                        <img src="./fluent_english_logo.webp" width="50" alt="logo" class="rounded-full glow">
+                    </div>
+                    <a href="#" class="text-2xl font-bold text-gradient">Fluent English</a>
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link font-medium transition-colors">Home</a>
+                    <a href="#features" class="nav-link font-medium transition-colors">Features</a>
+                    <a href="#courses" class="nav-link font-medium transition-colors">Courses</a>
+                    <a href="#tutors" class="nav-link font-medium transition-colors">Tutors</a>
+                    <a href="#testimonials" class="nav-link font-medium transition-colors">Testimonials</a>
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-xl" id="theme-icon"></i>
+                    </button>
+                    <a href="#contact" class="ml-4 btn-primary text-white px-6 py-2 rounded-full font-bold">Free
+                        Trial</a>
+                </div>
+
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-primary"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu"
+                class="hidden md:hidden mt-4 rounded-lg shadow-xl p-4 animate__animated animate__fadeIn"
+                style="background-color: var(--bg-primary); box-shadow: 0 10px 25px var(--shadow);">
+                <a href="#home" class="block py-3 px-4 rounded-lg font-medium transition-colors nav-link">Home</a>
+                <a href="#features"
+                    class="block py-3 px-4 rounded-lg font-medium transition-colors nav-link">Features</a>
+                <a href="#courses" class="block py-3 px-4 rounded-lg font-medium transition-colors nav-link">Courses</a>
+                <a href="#tutors" class="block py-3 px-4 rounded-lg font-medium transition-colors nav-link">Tutors</a>
+                <a href="#testimonials"
+                    class="block py-3 px-4 rounded-lg font-medium transition-colors nav-link">Testimonials</a>
+                <button id="mobile-theme-toggle"
+                    class="block w-full py-3 px-4 rounded-lg font-medium transition-colors nav-link text-left">
+                    <i class="fas fa-moon mr-2" id="mobile-theme-icon"></i>Dark Mode
+                </button>
+                <a href="#contact"
+                    class="block mt-2 btn-primary text-white py-3 px-4 rounded-lg font-bold text-center">Free Trial</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 relative overflow-hidden">
+        <div class="shape-blob"></div>
+        <div class="shape-blob two"></div>
+        <div class="shape-blob three"></div>
+
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 mb-10 md:mb-0 animate__animated animate__fadeInLeft">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    Speak English <span class="typing-demo text-accent">Fluently with Confidence</span>
+                </h1>
+                <p class="text-xl mb-8 opacity-90 max-w-lg">Personalized English tutoring from certified native
+                    speakers. Start your journey to fluency today with our expert tutors.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact"
+                        class="btn-secondary px-6 py-3 rounded-full font-bold text-center animate__animated animate__pulse animate__infinite">Start
+                        Free Trial</a>
+                    <a href="#courses"
+                        class="border-2 border-white text-white px-6 py-3 rounded-full font-bold text-center hover:bg-white hover:text-primary transition">Explore
+                        Courses</a>
+                </div>
+
+                <div class="mt-12 flex items-center space-x-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="flex -space-x-2">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-white" alt="student">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-white" alt="student">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                            class="w-10 h-10 rounded-full border-2 border-white" alt="student">
+                    </div>
+                    <div>
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-sm opacity-80">Trusted by 5,000+ students worldwide</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate__animated animate__fadeInRight">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                        alt="English learning" class="rounded-2xl shadow-2xl max-w-md w-full floating">
+                    <div class="absolute -bottom-5 -left-5 p-4 rounded-xl shadow-lg hidden md:block animate__animated animate__fadeInUp animate__delay-1s"
+                        style="background-color: var(--bg-primary); box-shadow: 0 10px 25px var(--shadow);">
+                        <div class="flex items-center">
+                            <div class="bg-primary p-3 rounded-lg text-white mr-3">
+                                <i class="fas fa-chart-line text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold" style="color: var(--text-primary);">Progress Tracker</p>
+                                <p class="text-sm" style="color: var(--text-secondary);">Monitor your improvement</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-5 -right-5 p-4 rounded-xl shadow-lg hidden md:block animate__animated animate__fadeInUp animate__delay-2s"
+                        style="background-color: var(--bg-primary); box-shadow: 0 10px 25px var(--shadow);">
+                        <div class="flex items-center">
+                            <div class="bg-secondary p-3 rounded-lg text-white mr-3">
+                                <i class="fas fa-calendar-check text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold" style="color: var(--text-primary);">Flexible Schedule</p>
+                                <p class="text-sm" style="color: var(--text-secondary);">Book anytime, anywhere</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator hidden md:block">
+            <a href="#features" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16" style="background-color: var(--bg-secondary);">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="stats-item p-6 rounded-xl shadow-sm hover:shadow-md transition"
+                    style="background-color: var(--bg-primary); box-shadow: 0 1px 3px var(--shadow);">
+                    <div class="text-4xl font-bold text-gradient mb-2">5,000+</div>
+                    <div class="font-medium" style="color: var(--text-secondary);">Students Taught</div>
+                </div>
+                <div class="stats-item p-6 rounded-xl shadow-sm hover:shadow-md transition"
+                    style="background-color: var(--bg-primary); box-shadow: 0 1px 3px var(--shadow);">
+                    <div class="text-4xl font-bold text-gradient mb-2">50+</div>
+                    <div class="font-medium" style="color: var(--text-secondary);">Certified Tutors</div>
+                </div>
+                <div class="stats-item p-6 rounded-xl shadow-sm hover:shadow-md transition"
+                    style="background-color: var(--bg-primary); box-shadow: 0 1px 3px var(--shadow);">
+                    <div class="text-4xl font-bold text-gradient mb-2">98%</div>
+                    <div class="font-medium" style="color: var(--text-secondary);">Satisfaction Rate</div>
+                </div>
+                <div class="stats-item p-6 rounded-xl shadow-sm hover:shadow-md transition"
+                    style="background-color: var(--bg-primary); box-shadow: 0 1px 3px var(--shadow);">
+                    <div class="text-4xl font-bold text-gradient mb-2">24/7</div>
+                    <div class="font-medium" style="color: var(--text-secondary);">Available Classes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20" style="background-color: var(--bg-primary);">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-secondary font-bold uppercase tracking-wider">Why Choose Us</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-primary);">Why Choose Fluent
+                    English?</h2>
+                <p class="text-xl max-w-2xl mx-auto" style="color: var(--text-secondary);">Our unique approach makes
+                    learning English effective, engaging, and tailored to your needs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card p-8 rounded-xl">
+                    <div class="feature-icon text-5xl mb-6">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Expert Native Tutors</h3>
+                    <p style="color: var(--text-secondary);">Learn from certified English teachers with years of
+                        experience and perfect
+                        accents.</p>
+                </div>
+
+                <div class="feature-card p-8 rounded-xl">
+                    <div class="feature-icon text-5xl mb-6">
+                        <i class="fas fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Personalized Lessons</h3>
+                    <p style="color: var(--text-secondary);">Customized curriculum based on your goals, level, and
+                        learning style.</p>
+                </div>
+
+                <div class="feature-card p-8 rounded-xl">
+                    <div class="feature-icon text-5xl mb-6">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Flexible Scheduling</h3>
+                    <p style="color: var(--text-secondary);">Book classes anytime, anywhere with our easy-to-use online
+                        platform.</p>
+                </div>
+
+                <div class="feature-card p-8 rounded-xl">
+                    <div class="feature-icon text-5xl mb-6">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Conversation Focus</h3>
+                    <p style="color: var(--text-secondary);">Practice real-life conversations to build confidence and
+                        fluency.</p>
+                </div>
+
+                <div class="feature-card p-8 rounded-xl">
+                    <div class="feature-icon text-5xl mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Progress Tracking</h3>
+                    <p style="color: var(--text-secondary);">Regular assessments and feedback to monitor your
+                        improvement.</p>
+                </div>
+
+                <div class="feature-card p-8 rounded-xl">
+                    <div class="feature-icon text-5xl mb-6">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">Cultural Insights</h3>
+                    <p style="color: var(--text-secondary);">Learn not just the language but also the cultural context
+                        behind it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 relative overflow-hidden" style="background-color: var(--bg-secondary);">
+        <div class="shape-blob" style="background: var(--accent); top: 10%; left: 10%;"></div>
+        <div class="shape-blob two" style="background: var(--secondary); top: 60%; left: 70%;"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-secondary font-bold uppercase tracking-wider">Our Programs</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-primary);">Our English Courses
+                </h2>
+                <p class="text-xl max-w-2xl mx-auto" style="color: var(--text-secondary);">Choose the program that
+                    matches your goals and English level.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="course-card">
+                    <div class="p-8"
+                        style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);">
+                        <h3 class="text-xl font-bold text-white">General English</h3>
+                        <div class="text-3xl font-bold mt-2 text-white">$19<span
+                                class="text-lg opacity-80">/lesson</span></div>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">All levels (A1-C2)</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Grammar & Vocabulary</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Speaking & Listening</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Reading & Writing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Daily Conversation</span>
+                            </li>
+                        </ul>
+                        <a href="#contact"
+                            class="block text-center btn-primary text-white py-3 rounded-full font-bold">Get Started</a>
+                    </div>
+                </div>
+
+                <div class="course-card popular-course transform scale-105">
+                    <div class="bg-gradient-to-r from-primary to-secondary p-8 text-white">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold">Business English</h3>
+                                <div class="text-3xl font-bold mt-2">$29<span class="text-lg opacity-80">/lesson</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Professional Communication</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Emails & Reports</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Presentations & Meetings</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Negotiation Skills</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Industry-specific Terms</span>
+                            </li>
+                        </ul>
+                        <a href="#contact"
+                            class="block text-center btn-primary text-white py-3 rounded-full font-bold">Get Started</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="p-8"
+                        style="background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);">
+                        <h3 class="text-xl font-bold text-white">Exam Preparation</h3>
+                        <div class="text-3xl font-bold mt-2 text-white">$25<span
+                                class="text-lg opacity-80">/lesson</span></div>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">IELTS/TOEFL/TOEIC</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Test Strategies</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Practice Tests</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Time Management</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span style="color: var(--text-primary);">Score Improvement</span>
+                            </li>
+                        </ul>
+                        <a href="#contact"
+                            class="block text-center btn-primary text-white py-3 rounded-full font-bold">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutors Section -->
+    <section id="tutors" class="py-20" style="background-color: var(--bg-primary);">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-secondary font-bold uppercase tracking-wider">Our Team</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-primary);">Meet Our Expert
+                    Tutors</h2>
+                <p class="text-xl max-w-2xl mx-auto" style="color: var(--text-secondary);">Learn from the best English
+                    language instructors from
+                    around the world.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="tutor-card rounded-xl overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1616776005756-4dca36124bf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                            alt="Tutor Sarah" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 class="text-xl text-white font-bold">Sarah Johnson</h3>
+                            <p class="text-blue-300">British English Specialist</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="mb-4" style="color: var(--text-secondary);">10+ years teaching experience with focus
+                            on pronunciation and
+                            business English.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--primary);">IELTS</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--primary);">Business</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--primary);">Grammar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tutor-card rounded-xl overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1615109398623-88346a601842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                            alt="Tutor Michael" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 class="text-xl text-white font-bold">Michael Brown</h3>
+                            <p class="text-blue-300">American English Coach</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="mb-4" style="color: var(--text-secondary);">Former university professor specializing
+                            in academic writing and
+                            test prep.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--secondary);">TOEFL</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--secondary);">Writing</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--secondary);">Academic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tutor-card rounded-xl overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                            alt="Tutor Emily" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 class="text-xl text-white font-bold">Emily Wilson</h3>
+                            <p class="text-blue-300">Conversation Expert</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="mb-4" style="color: var(--text-secondary);">Helps students gain confidence in speaking
+                            through engaging
+                            discussions.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--accent);">Speaking</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--accent);">Pronunciation</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--accent);">Slang</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tutor-card rounded-xl overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1542190891-2093d38760f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                            alt="Tutor David" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 class="text-xl text-white font-bold">David Lee</h3>
+                            <p class="text-blue-300">Australian English Tutor</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="mb-4" style="color: var(--text-secondary);">Specializes in helping professionals
+                            improve their workplace
+                            communication.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--primary);">Business</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--primary);">Interview
+                                Prep</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium text-white"
+                                style="background-color: var(--primary);">Accent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block btn-primary text-white px-8 py-3 rounded-full font-bold">View All
+                    Tutors</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20" style="background-color: var(--bg-secondary);"></section>
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-secondary font-bold uppercase tracking-wider">Success Stories</span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Don't Just Take Our Word For It</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Hear from our students who transformed their English
+                skills.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="testimonial-card bg-white p-8 rounded-xl">
+                <div class="flex items-center mb-6">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Student" class="w-16 h-16 rounded-full object-cover mr-4">
+                    <div>
+                        <h4 class="font-bold">Maria Rodriguez</h4>
+                        <p class="text-primary">Spain | IELTS Student</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">"Thanks to Fluent English, I improved my IELTS score from 6.0 to 7.5
+                    in just 3 months! My tutor Sarah was incredibly patient and tailored each lesson to my
+                    weaknesses."</p>
+                <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-card bg-white p-8 rounded-xl">
+                <div class="flex items-center mb-6">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                        alt="Student" class="w-16 h-16 rounded-full object-cover mr-4">
+                    <div>
+                        <h4 class="font-bold">Ahmed Khan</h4>
+                        <p class="text-primary">UAE | Business English</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">"The business English course transformed my confidence in meetings. I
+                    went from being silent to actively participating and even leading discussions with international
+                    clients."</p>
+                <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-card bg-white p-8 rounded-xl">
+                <div class="flex items-center mb-6">
+                    <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=699&q=80"
+                        alt="Student" class="w-16 h-16 rounded-full object-cover mr-4">
+                    <div>
+                        <h4 class="font-bold">Yuki Tanaka</h4>
+                        <p class="text-primary">Japan | Conversation</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">"I was terrified to speak English before joining Fluent English. Now I
+                    can travel abroad without anxiety and make new friends easily. The conversation practice was
+                    life-changing!"</p>
+                <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <a href="#" class="inline-flex items-center text-primary font-bold">
+                See more success stories
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">See Our Teaching Method in Action</h2>
+                    <p class="text-xl mb-8 opacity-90">Watch how our interactive lessons help students learn faster and
+                        retain more.</p>
+                    <a href="#contact" class="btn-secondary px-8 py-3 rounded-full font-bold inline-block">Start
+                        Learning Now</a>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-black/20">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <button class="bg-white/20 backdrop-blur-md rounded-full p-6 hover:bg-white/30 transition">
+                                <i class="fas fa-play text-3xl"></i>
+                            </button>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                            alt="Video thumbnail" class="w-full h-full object-cover opacity-70">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative overflow-hidden" style="background-color: var(--bg-primary);"></section>
+    <div class="shape-blob" style="background: var(--accent); top: 20%; left: 20%;"></div>
+    <div class="shape-blob two" style="background: var(--secondary); top: 70%; left: 60%;"></div>
+
+    <div class="container mx-auto px-6 text-center relative z-10 pb-8">
+        <div class="max-w-3xl mx-auto p-8 rounded-2xl shadow-xl"
+            style="background-color: var(--bg-primary); box-shadow: 0 25px 50px var(--shadow);">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--text-primary);">Ready to Transform Your
+                English?</h2>
+            <p class="text-xl mb-8" style="color: var(--text-secondary);">Join thousands of students who have achieved
+                fluency with our
+                proven methods.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="btn-primary px-8 py-3 rounded-full font-bold">Start Your Free Trial</a>
+                <a href="#"
+                    class="border-2 border-primary text-primary px-8 py-3 rounded-full font-bold hover:bg-primary hover:text-white transition">Schedule
+                    a Call</a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20" style="background-color: var(--bg-secondary);">
+        <div class="container mx-auto px-6"></div>
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-secondary font-bold uppercase tracking-wider">Get Started</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-primary);">Start Your English
+                    Journey Today</h2>
+                <p class="text-xl" style="color: var(--text-secondary);">Fill out the form below to schedule your free
+                    trial lesson.</p>
+            </div>
+
+            <div class="rounded-2xl shadow-xl overflow-hidden"
+                style="background-color: var(--bg-primary); box-shadow: 0 25px 50px var(--shadow);"></div>
+            <div class="grid md:grid-cols-2">
+                <div class="bg-gradient-to-br from-primary to-secondary p-12 text-white hidden md:block">
+                    <h3 class="text-2xl font-bold mb-6">Have Questions?</h3>
+                    <p class="mb-8 opacity-90">We're here to help! Contact our support team for any questions
+                        about our courses or teaching methods.</p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-white/20 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email Us</h4>
+                                <p>hello@fluentenglish.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-white/20 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Call Us</h4>
+                                <p>+44 20 1234 5678</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-white/20 p-3 rounded-lg mr-4">
+                                <i class="fas fa-comments text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Live Chat</h4>
+                                <p>Available 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-12">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block font-medium mb-2" style="color: var(--text-primary);">Full
+                                Name</label>
+                            <input type="text" id="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                required>
+                        </div>
+                        <div>
+                            <label for="email" class="block font-medium mb-2" style="color: var(--text-primary);">Email
+                                Address</label>
+                            <input type="email" id="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block font-medium mb-2" style="color: var(--text-primary);">Phone
+                                Number</label>
+                            <input type="tel" id="phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="level" class="block font-medium mb-2"
+                                style="color: var(--text-primary);">Current English
+                                Level</label>
+                            <select id="level"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select your level</option>
+                                <option value="beginner">Beginner (A1)</option>
+                                <option value="elementary">Elementary (A2)</option>
+                                <option value="intermediate">Intermediate (B1)</option>
+                                <option value="upper-intermediate">Upper Intermediate (B2)</option>
+                                <option value="advanced">Advanced (C1)</option>
+                                <option value="proficient">Proficient (C2)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="goals" class="block font-medium mb-2"
+                                style="color: var(--text-primary);">Learning
+                                Goals</label>
+                            <textarea id="goals" rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit"
+                                class="w-full btn-primary text-white px-6 py-3 rounded-lg font-bold">Book Free
+                                Trial Lesson</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20" style="background-color: var(--bg-primary);"></section>
+    <div class="container mx-auto px-6 max-w-4xl">
+        <div class="text-center mb-16">
+            <span class="text-secondary font-bold uppercase tracking-wider">Support</span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <p class="text-xl text-gray-600">Find answers to common questions about our English tutoring services.
+            </p>
+        </div>
+
+        <div class="space-y-4">
+            <div class="faq-item bg-gray-50 rounded-xl">
+                <button class="faq-toggle w-full text-left p-6 flex justify-between items-center">
+                    <h3 class="text-lg font-bold">How does the free trial lesson work?</h3>
+                    <i class="fas fa-chevron-down text-primary"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 hidden">
+                    <p class="text-gray-600">Your free trial lesson is a 30-minute session with one of our tutors.
+                        We'll assess your current level, discuss your goals, and show you how our teaching approach
+                        works. It's a great opportunity to experience our platform and teaching style before
+                        committing.</p>
+                </div>
+            </div>
+
+            <div class="faq-item bg-gray-50 rounded-xl">
+                <button class="faq-toggle w-full text-left p-6 flex justify-between items-center">
+                    <h3 class="text-lg font-bold">What's the cancellation policy?</h3>
+                    <i class="fas fa-chevron-down text-primary"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 hidden">
+                    <p class="text-gray-600">You can cancel or reschedule any lesson up to 12 hours before the
+                        scheduled time without penalty. Cancellations within 12 hours may be subject to a fee. We
+                        understand emergencies happen though, so please contact us if you have an unexpected
+                        situation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item bg-gray-50 rounded-xl">
+                <button class="faq-toggle w-full text-left p-6 flex justify-between items-center">
+                    <h3 class="text-lg font-bold">How are tutors selected?</h3>
+                    <i class="fas fa-chevron-down text-primary"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 hidden">
+                    <p class="text-gray-600">All our tutors undergo a rigorous selection process including
+                        certification verification, teaching demonstration, and background checks. We only accept
+                        tutors with proven teaching experience and excellent communication skills. Less than 15% of
+                        applicants are accepted.</p>
+                </div>
+            </div>
+
+            <div class="faq-item bg-gray-50 rounded-xl">
+                <button class="faq-toggle w-full text-left p-6 flex justify-between items-center">
+                    <h3 class="text-lg font-bold">What technology do I need for lessons?</h3>
+                    <i class="fas fa-chevron-down text-primary"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 hidden">
+                    <p class="text-gray-600">You'll need a computer, tablet, or smartphone with a stable internet
+                        connection, webcam, and microphone. We recommend using Chrome or Firefox browsers. Our
+                        platform works on all major devices and operating systems. Before your first lesson, we'll
+                        send you a quick tech check guide.</p>
+                </div>
+            </div>
+
+            <div class="faq-item bg-gray-50 rounded-xl">
+                <button class="faq-toggle w-full text-left p-6 flex justify-between items-center">
+                    <h3 class="text-lg font-bold">How quickly will I see progress?</h3>
+                    <i class="fas fa-chevron-down text-primary"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 hidden">
+                    <p class="text-gray-600">Most students notice improvement within 2-3 weeks of regular lessons
+                        (2-3 sessions per week). The speed of progress depends on your starting level, learning
+                        goals, and practice outside lessons. We provide regular progress reports so you can track
+                        your improvement.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="#" class="inline-flex items-center text-primary font-bold">
+                View all FAQs
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Get English Learning Tips</h2>
+            <p class="mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for weekly English tips, special offers, and
+                free resources.</p>
+
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address"
+                    class="flex-grow px-4 py-3 rounded-lg focus:outline-none"
+                    style="background-color: white; color: #1f2937; border: 1px solid #e5e7eb;">
+                <button type="submit" class="btn-secondary px-6 py-3 rounded-lg font-bold">Subscribe</button>
+            </form>
+
+            <p class="text-sm mt-4 opacity-80">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <div class="text-2xl font-bold text-blue-400 mb-6">
+                        <!-- <i class="fas fa-language mr-2"></i>  -->
+                        <img src="./fluent_english_logo.webp" width="50" alt="logo" class="rounded-full glow">
+                        Fluent English
+                    </div>
+                    <p class="text-gray-400 mb-6">Helping students worldwide achieve English fluency through
+                        personalized, effective tutoring since 2015.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition">Courses</a></li>
+                        <li><a href="#tutors" class="text-gray-400 hover:text-white transition">Tutors</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Courses</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">General English</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Business English</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Exam Preparation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Conversation Practice</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Academic Writing</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-4 text-blue-400"></i>
+                            <span>123 Language Street, London, UK</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-4 text-blue-400"></i>
+                            <span>+44 20 1234 5678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-4 text-blue-400"></i>
+                            <span>hello@fluentenglish.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+                style="border-top: 1px solid var(--border-color);">
+                <p class="mb-4 md:mb-0" style="color: var(--text-secondary);">© <span id="current-year"></span> Fluent
+                    English. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="transition hover:text-white" style="color: var(--text-secondary);">Privacy
+                        Policy</a>
+                    <a href="#" class="transition hover:text-white" style="color: var(--text-secondary);">Terms of
+                        Service</a>
+                    <a href="#" class="transition hover:text-white" style="color: var(--text-secondary);">Cookie
+                        Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Set current year in footer
+        const currentYear = new Date().getFullYear();
+        document.getElementById('current-year').textContent = currentYear;
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('animate__fadeIn');
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                // Toggle active class on button
+                button.classList.toggle('active');
+
+                // Toggle content visibility
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    content.classList.add('animate__animated', 'animate__fadeIn');
+                } else {
+                    content.classList.add('hidden');
+                    content.classList.remove('animate__animated', 'animate__fadeIn');
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // In a real application, you would send this data to your server
+            alert(`Thank you, ${name}! We've received your request and will contact you at ${email} shortly to schedule your free trial lesson.`);
+
+            // Reset form
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+                backToTopButton.classList.add('animate__animated', 'animate__fadeIn');
+            } else {
+                backToTopButton.classList.add('hidden');
+                backToTopButton.classList.remove('animate__animated', 'animate__fadeIn');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Animate elements when they come into view
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.feature-card, .testimonial-card, .tutor-card, .course-card, .stats-item');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+
+                if (elementPosition < screenPosition) {
+                    element.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Dark mode functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+        const body = document.body;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        // Apply the saved theme
+        if (currentTheme === 'dark') {
+            body.setAttribute('data-theme', 'dark');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+            mobileThemeIcon.classList.remove('fa-moon');
+            mobileThemeIcon.classList.add('fa-sun');
+            mobileThemeToggle.innerHTML = '<i class="fas fa-sun mr-2" id="mobile-theme-icon"></i>Light Mode';
+        }
+
+        // Toggle theme function
+        function toggleTheme() {
+            const currentTheme = body.getAttribute('data-theme');
+
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                mobileThemeIcon.classList.remove('fa-sun');
+                mobileThemeIcon.classList.add('fa-moon');
+                mobileThemeToggle.innerHTML = '<i class="fas fa-moon mr-2" id="mobile-theme-icon"></i>Dark Mode';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                mobileThemeIcon.classList.remove('fa-moon');
+                mobileThemeIcon.classList.add('fa-sun');
+                mobileThemeToggle.innerHTML = '<i class="fas fa-sun mr-2" id="mobile-theme-icon"></i>Light Mode';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Add event listeners
+        themeToggle.addEventListener('click', toggleTheme);
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+    </script>
+</body>
+
+</html>
